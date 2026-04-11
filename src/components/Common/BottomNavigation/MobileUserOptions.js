@@ -65,25 +65,25 @@ const MobileUserOptions = () => {
                 // },
             ],
         },
-        {
-            title: "Shopping & Services",
-            links: [
-                // {
-                //     title: "Wishlist",
-                //     link: "/dashboard/wishlist",
-                //     icon: <FaHeart />,
-                //     badge: user.wishlistCount,
-                //     description: "Saved items and favorites",
-                // },
-                {
-                    title: "Order History",
-                    link: "/dashboard/orders",
-                    icon: <FaCartShopping />,
-                    badge: user.pendingOrders,
-                    description: "Track your purchases",
-                },
-            ],
-        },
+        // {
+        //     title: "Shopping & Services",
+        //     links: [
+        //         {
+        //             title: "Wishlist",
+        //             link: "/dashboard/wishlist",
+        //             icon: <FaHeart />,
+        //             badge: user.wishlistCount,
+        //             description: "Saved items and favorites",
+        //         },
+        //         {
+        //             title: "Order History",
+        //             link: "/dashboard/orders",
+        //             icon: <FaCartShopping />,
+        //             badge: user.pendingOrders,
+        //             description: "Track your purchases",
+        //         },
+        //     ],
+        // },
         // {
         //     title: "Resources",
         //     links: [

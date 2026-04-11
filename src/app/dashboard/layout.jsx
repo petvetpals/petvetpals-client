@@ -20,7 +20,7 @@ const DashboardLayout = ({ children }) => {
         { title: "Appointments", link: "/dashboard/appointments", icon: <CalendarClock size={20} /> },
         { title: "Messages", link: "/dashboard/messages", icon: <MessageCircle size={20} /> },
         // { title: "Wishlist", link: "/dashboard/wishlist", icon: <Heart size={20} /> },
-        { title: "Order History", link: "/dashboard/orders", icon: <ShoppingCart size={20} /> },
+        // { title: "Order History", link: "/dashboard/orders", icon: <ShoppingCart size={20} /> },
         { title: "User Profile", link: "/dashboard/account", icon: <User size={20} /> }
     ];
     return (
