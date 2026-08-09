@@ -50,10 +50,10 @@ const AddUpdatePet = ({ popup = () => { }, setPopup = () => { }, setPetDetailsOp
     e.preventDefault();
     const formData = new FormData();
     formData.append('name', formState.name);
-    formData.append('type', formState.type);
+    formData.append('type', formState.type.toLowerCase());
     formData.append('date_of_birth', formState.date_of_birth);
     formData.append('breed', formState.breed);
-    formData.append('gender', formState.gender);
+    formData.append('gender', formState.gender.toLowerCase());
     formData.append('weight', formState.weight);
     formData.append('image', formState.image);
 

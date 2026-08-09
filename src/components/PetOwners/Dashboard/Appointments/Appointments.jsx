@@ -140,7 +140,7 @@ const Appointments = () => {
             {filtered_appointments?.length > 0 ? (
                 <div className='space-y-5 max-md:space-y-8 sm:max-h-screen sm:overflow-y-auto mt-6'>
                     {filtered_appointments.map((appointment, index) => (
-                        <div key={index} className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 items-center gap-5  md:p-3 shadow-sm max-md:shadow-lg max-md:hover:shadow-xl duration-200 bg-white rounded-md'>
+                        <div key={index} className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 items-center gap-3  md:p-3 shadow-sm max-md:shadow-lg max-md:hover:shadow-xl duration-200 bg-white rounded-md'>
                             <div className='text-center lg:col-span-1 max-md:bg-primary max-md:rounded-md max-md:p-3'>
                                 {(() => {
                                     const date = new Date(appointment.date);
@@ -154,11 +154,13 @@ const Appointments = () => {
                                 })()}
                             </div>
 
-                            <div className='flex gap-3 lg:col-span-3 px-3'>
-                                <Image src={appointment.vet?.image || DefaultVetImage} alt='vet_img' width={200} height={200} className='w-20 h-20 object-cover rounded-full' />
+                            <div className='flex gap-3 lg:col-span-4 px-3 items-center'>
+                                <div>
+                                    <Image src={appointment.vet?.image || DefaultVetImage} alt='vet_img' width={200} height={200} className='w-20 h-20 object-cover rounded-full' />
+                                </div>
                                 <div>
                                     <h5 className='font-semibold text-lg mb-1'>{appointment.vet?.fullName}</h5>
-                                    <p className='text-sm text-gray-500'>{appointment.vet?.degrees[0]}</p>
+                                    <p className='text-sm text-gray-500'>{appointment.vet?.degrees.length > 0 ? appointment.vet?.degrees[0] : 'Doctor of Veterinary Test'}</p>
                                 </div>
                             </div>
 
@@ -174,10 +176,10 @@ const Appointments = () => {
                                 <p className='text-amber-300 flex items-center gap-2'><HiOutlineMapPin className='text-lg' /> Online</p>
                             </div>
 
-                            <div className='lg:col-span-2 px-3'>
+                            <div className='lg:col-span-1 px-3 md:px-2'>
                                 <p className='text-purple-600 flex items-center gap-2 mb-2'>
-                                    {appointment?.pet?.type == 'Dog' ? <LuDog className='text-lg' /> : <LuCat className='text-lg' />}
-                                    {appointment?.pet?.name || 'Unknown'} ({appointment?.pet?.type || ''})</p>
+                                    {appointment?.pet?.type == 'dog' ? <LuDog className='text-lg' /> : <LuCat className='text-lg' />}
+                                    {appointment?.pet?.name || 'Unknown'}</p>
                                 <p className={`${appointment.payment_status ? 'text-green-500' : 'text-red-500'} flex items-center gap-2`}><HiOutlineCurrencyDollar className='text-lg' /> {appointment.payment_status ? 'Paid' : 'Unpaid'}</p>
                             </div>
 

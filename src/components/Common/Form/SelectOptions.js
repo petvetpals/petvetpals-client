@@ -44,7 +44,7 @@ const SelectOptions = ({ options, name, default: defaultValue, placeholder, onCh
         <div className="relative w-full" ref={containerRef}>
             <div
                 onClick={() => setSelected(!selected)}
-                className="cursor-pointer text-gray-800 font-light border border-gray-300 p-2 rounded outline-[#5d3855a3] flex justify-between items-center bg-white text-sm"
+                className="capitalize cursor-pointer text-gray-800 font-light border border-gray-300 p-2 rounded outline-[#5d3855a3] flex justify-between items-center bg-white text-sm"
             >
                 {selectedOption} {selected ? <HiChevronUp /> : <HiChevronDown />}
             </div>
