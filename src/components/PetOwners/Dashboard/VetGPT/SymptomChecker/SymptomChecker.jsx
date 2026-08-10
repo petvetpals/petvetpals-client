@@ -181,7 +181,8 @@ export default function SymptomChecker() {
   } = useGetPetsQuery()
   const [getGptRecommendation, { isLoading: isGptLoading }] = useGetGptRecommendationMutation()
   const [saveReport] = useSaveSymptomReportMutation()
-  const { data: history = [] } = useGetSymptomHistoryQuery(selectedPet?._id)
+
+  const { data: history = [] } = useGetSymptomHistoryQuery(selectedPet?._id, { skip: !selectedPet?._id })
 
   const bodyParts = [
     {
@@ -278,10 +279,11 @@ export default function SymptomChecker() {
       ]
 
       const { data } = await getGptRecommendation({
-        pet: {...selectedPet, age: getPetAge(selectedPet.date_of_birth)},
+        pet: { ...selectedPet, age: getPetAge(selectedPet.date_of_birth) },
         symptoms: symptomsFormatted,
         conditions: matched,
       })
+      console.log("data:", data)
 
       setGptResponse(data?.recommendation || "No recommendation returned.")
       await saveReport({
@@ -345,8 +347,8 @@ export default function SymptomChecker() {
           <div className="flex items-center justify-center gap-4 mb-6">
             <motion.div
               className="p-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl shadow-xl max-md:hidden"
-              // whileHover={{ rotate: 360 }}
-              // transition={{ duration: 0.6 }}
+            // whileHover={{ rotate: 360 }}
+            // transition={{ duration: 0.6 }}
             >
               <Stethoscope className="h-10 w-10 text-white" />
             </motion.div>
