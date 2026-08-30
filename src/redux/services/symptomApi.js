@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const symptomApi = createApi({
   reducerPath: 'symptomApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: `${process.env.NEXT_PUBLIC_API_BASE}/api/symptoms`,
+    baseUrl: `${process.env.NEXT_PUBLIC_API_BASE}/api/vet-gpt/symptoms`,
     credentials: 'include',
   }),
   prepareHeaders: (headers, { body }) => {

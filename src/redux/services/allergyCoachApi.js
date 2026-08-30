@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const allergyCoachApi = createApi({
     reducerPath: 'allergyCoachApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: `${process.env.NEXT_PUBLIC_API_BASE}/api/allergy-itch-coach`,
+        baseUrl: `${process.env.NEXT_PUBLIC_API_BASE}/api/vet-gpt/allergy-itch-coach`,
         credentials: 'include'
     }),
     prepareHeaders: (headers, { body }) => {

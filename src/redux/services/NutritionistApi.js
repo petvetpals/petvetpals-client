@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const nutritionistApi = createApi({
     reducerPath: 'nutritionistApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: `${process.env.NEXT_PUBLIC_API_BASE}/api/nutritionist`,
+        baseUrl: `${process.env.NEXT_PUBLIC_API_BASE}/api/vet-gpt/nutritionist`,
         credentials: 'include'
     }),
     prepareHeaders: (headers, { body }) => {
