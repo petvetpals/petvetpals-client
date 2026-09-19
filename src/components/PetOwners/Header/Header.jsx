@@ -101,7 +101,7 @@ const Header = () => {
                 {/* Right Side Icons */}
                 {pathname.startsWith('/dashboard') ?
                     <div className={`flex items-center gap-6`}>
-                        <div className="sm:order-1 max-sm:order-3"><Search /></div>
+                        {/* <div className="sm:order-1 max-sm:order-3"><Search /></div> */}
                         <div className="sm:order-2 max-sm:order-2 relative mt-1"><CartCount /></div>
                         <button className="sm:order-3  flex items-center gap-1 text-primary max-sm:hidden">
                             <HiOutlineUserCircle className="text-[21px] " />My account
@@ -109,7 +109,7 @@ const Header = () => {
                     </div>
                     :
                     <div className={`flex items-center gap-6`}>
-                        <Search />
+                        {/* <Search /> */}
                         <CartCount />
                         {authUser ? (
                             <Link href="/dashboard" >

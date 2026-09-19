@@ -7,7 +7,6 @@ import AiHealthTwin from "@/components/Landing/AiHealthTwin";
 import TeleVetSection from "@/components/Landing/TeleVetSection";
 import HowWeWorkSection from "@/components/Landing/HowWeWork";
 import SmartShopSection from "@/components/Landing/SmartShopSection";
-import PetHealthTrackerSection from "@/components/Landing/PetHealthTrackerSection";
 import BlogsSection from "@/components/Landing/BlogsSection";
 
 const Home = () => {
@@ -21,7 +20,6 @@ const Home = () => {
         <TeleVetSection />
         <HowWeWorkSection />
         <SmartShopSection />
-        <PetHealthTrackerSection />
         <BlogsSection />
       </main>
       <Footer />

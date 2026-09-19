@@ -35,8 +35,8 @@ const FeaturesSection = () => {
             glowColor: "shadow-orange-500/25",
         },
         {
-            title: "Foods & Accessories",
-            subtitle: "Premium pet supplies",
+            title: "Meds & Accessories",
+            subtitle: "Medications and supplies",
             link: "/shop",
             link_title: "Shop Now",
             icon: ShoppingBag,

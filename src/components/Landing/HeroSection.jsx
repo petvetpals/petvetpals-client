@@ -107,7 +107,7 @@ const HeroSection = () => {
                                 Smarter <div className="md:hidden" />
                                 <span className="text-primary italic font-light"> Pet Care</span>
                             </motion.h2>
-                            <p className="text-slate-500 text-xl md:text-2xl max-w-xl leading-relaxed font-medium">
+                            <p className="text-slate-500 text-xl leading-relaxed">
                                 Track symptoms, manage medications, and get AI-powered care insights — all in one place for pets you love
                             </p>
                         </div>
@@ -116,19 +116,19 @@ const HeroSection = () => {
                         <div className="md:w-10/12  grid grid-cols-2 md:grid-cols-3 pt-4 pb-8 border-b border-slate-100">
                             <div>
                                 <p className="text-3xl font-black text-slate-900 leading-none mb-2">10k+</p>
-                                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                                <p className="text-xs text-slate-600 tracking-widest">
                                     Symptom Checks Run
                                 </p>
                             </div>
                             <div>
                                 <p className="text-3xl font-black text-slate-900 leading-none mb-2">24/7</p>
-                                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                                <p className="text-xs text-slate-600 tracking-widest">
                                     Care Access
                                 </p>
                             </div>
                             <div className="hidden md:block">
                                 <p className="text-3xl font-black text-slate-900 leading-none mb-2">1 App</p>
-                                <p className="text-[10px] font-black text-slate-400 uppercase tracking-widest">
+                                <p className="text-xs text-slate-600 tracking-widest">
                                     Health, Meds & Reminders
                                 </p>
                             </div>
